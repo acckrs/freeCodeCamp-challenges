@@ -33,9 +33,9 @@ function convertToRoman(num) {
     };
     var digits = num.toString().split('');
     var newArr = [];
-    var digitsCount = num.toString().length,
-        counter = 0,
-        exponent = digitsCount - 1;
+    var digitsCount = num.toString().length;
+    var counter = 0;
+    var exponent = digitsCount - 1;
     while (counter < digitsCount) {
         digits[counter] = (digits[counter] * Math.pow(10, exponent));
         counter++;

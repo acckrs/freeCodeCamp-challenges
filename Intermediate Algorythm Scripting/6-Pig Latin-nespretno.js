@@ -2,6 +2,7 @@
     function isVowel(c) {
     return ['a', 'e', 'i', 'o', 'u'].indexOf(c.toLowerCase()) !== -1
 }
+
 function translatePigLatin(str) {
 
     var letters = str.split('');

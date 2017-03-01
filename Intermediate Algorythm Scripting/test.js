@@ -1,20 +1,12 @@
-function fearNotLetter(str) {
-
-  for(var i = 0; i < str.length; i++) {
-    /* code of current character */
-    var code = str.charCodeAt(i);
-
-    /* if code of current character is not equal to first character + no of iteration
-    hence character has been escaped */
-    if (code !== str.charCodeAt(0) + i) {
-
-      /* if current character has escaped one character find previous char and return */
-      return String.fromCharCode(code - 1);
-    }  
-  }
-  return undefined;
-}
-fearNotLetter("abce") // should return "d".
-fearNotLetter("abcdefghjklmno") //should return "i".
-fearNotLetter("bcd") //should return undefined.
-fearNotLetter("yz") //should return undefined.
+var maps = {
+  "&": "&​amp;",
+  "<": "&​lt;",
+  ">": "&​gt;",
+  "'": "&​apos;",
+  
+};
+var str = "Dolce '&\"<> Gabanna";
+var newStr=str.replace(/'|&|<|>/g,function(match){
+  return maps[match];
+}).replace(/\"/g,"&quot;");
+console.log(newStr);

@@ -3,7 +3,6 @@ var maps = {
   "<": "&​lt;",
   ">": "&​gt;",
   "'": "&​apos;",
-  
 };
 var str = "Dolce '&\"<> Gabanna";
 var newStr=str.replace(/'|&|<|>/g,function(match){

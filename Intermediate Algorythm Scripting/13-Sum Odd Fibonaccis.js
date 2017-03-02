@@ -3,13 +3,15 @@ function sumFibs(num) {
     for (var i = 1; fibbs[i] <= num; i++) {
         fibbs.push(fibbs[i] + fibbs[i - 1]);
     }
+
     fibbs.pop();
-    var newAr = fibbs.filter(function (val) {
-        return val % 2 !== 0;
-    });
-    return console.log(newAr.reduce(function (a, b) {
-        return a + b;
-    }));
+
+    function sumOdds(a, b) {
+        if (b % 2 !== 0) return a + b;
+        else return a;
+    }
+
+    return console.log(fibbs.reduce(sumOdds));
 }
 
 sumFibs(21);

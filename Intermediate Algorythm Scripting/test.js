@@ -1,12 +1,7 @@
-var maps = {
-  "&": "&​amp;",
-  "<": "&​lt;",
-  ">": "&​gt;",
-  "'": "&​apos;",
-  
-};
-var str = "Dolce '&\"<> Gabanna";
-var newStr=str.replace(/'|&|<|>/g,function(match){
-  return maps[match];
-}).replace(/\"/g,"&quot;");
-console.log(newStr);
+function gcd(x, y) {    // Implements the Euclidean Algorithm
+    if (y === 0)
+        return x;
+    else
+        return gcd(y, x%y);
+    }
+    console.log(gcd(252,105));

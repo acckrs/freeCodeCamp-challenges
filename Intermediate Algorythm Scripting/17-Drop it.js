@@ -11,10 +11,13 @@ function dropElements(arr, func) {
     var newArr = arr;
     for (var i = 0; i < arr.length; i++) {
         if (func(arr[i])) {
-            newArr = newArr.slice(i);break;
+            newArr = newArr.slice(i);
+            break;
         }
     }
-    if (newArr===arr)newArr=[];
+    if (newArr === arr) {
+        newArr = [];
+    }
 
     //newArr=arr.filter(func);
 

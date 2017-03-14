@@ -7,10 +7,7 @@ Here are some helpful links:
 */
 
   function steamrollArray(arr) {
-  // I'm a steamroller, baby
-  var newArr=[];
-  str=arr.join();
-  return str.split(",");
+ 
 }
 
 steamrollArray([1, {}, [3, [[4]]]]);

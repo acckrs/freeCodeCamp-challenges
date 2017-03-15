@@ -1,7 +1,4 @@
-function gcd(x, y) {    // Implements the Euclidean Algorithm
-    if (y === 0)
-        return x;
-    else
-        return gcd(y, x%y);
-    }
-    console.log(gcd(252,105));
+function binToDec(str) {
+    return console.log(parseInt(str, 2));
+}
+binToDec("01110010");

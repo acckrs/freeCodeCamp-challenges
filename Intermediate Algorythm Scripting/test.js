@@ -5,4 +5,9 @@ function fac(n) {
         n--;
     }
 }
-console.log(fac('5'));
+var test = [
+    [3, 4, 5]
+];
+var bb = test.push([3, 4]);
+console.log(bb);
+//console.log(fac('5'));

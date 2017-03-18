@@ -8,12 +8,16 @@ Here are some helpful links:
 
 function steamrollArray(arr) {
     var newArr = [];
-    arr.map(function(val) {
-        if (!Array.isArray(val)) {
-            newArr.push(val);
+
+    function check(val2) {
+        if (!Array.isArray(val2)) {
+            return newArr.push(val2);
         } else
-            val.map(steamrollArray);
-    })
+            return val2.map(check);
+    }
+
+    arr.map(check);
+    return newArr;
 }
 
 console.log(steamrollArray([1, {},

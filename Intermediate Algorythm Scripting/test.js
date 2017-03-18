@@ -5,4 +5,4 @@ function fac(n) {
         n--;
     }
 }
-console.log(fac(5));
+console.log(fac('5'));

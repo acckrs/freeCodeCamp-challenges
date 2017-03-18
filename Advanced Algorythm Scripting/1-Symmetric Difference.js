@@ -13,12 +13,14 @@ Here are some helpful links:
     Symmetric Difference
   *   
   */
+
+//Function to get symmetric difference from two arrays
 function diffTwoArrays(arr1, arr2) {
     var merged = arr1.concat(arr2);
-
     function check(item) {
         return (arr1.indexOf(item) === -1 || arr2.indexOf(item) === -1);
     }
+
     var notUniq = merged.filter(check);
 
     function uniq(a) {
@@ -26,28 +28,23 @@ function diffTwoArrays(arr1, arr2) {
     }
     return uniq(notUniq);
 }
-
+//Function to get symmetric difference from multiple arrays
 function recurseSym(initArr) {
     if (initArr.length === 2) {
         return diffTwoArrays(initArr[0], initArr[1]);
     } else {
-        var firstSym = diffTwoArrays(initArr[0], initArr[1])
+        var firstSym = diffTwoArrays(initArr[0], initArr[1]);
         initArr = initArr.slice(2);
         var count = initArr.unshift(firstSym);
         return recurseSym(initArr);
     }
 }
 
+//Now I create array from arguments and pass it to recurseSym function.
 function sym(args) {
     var acctArr = Array.prototype.slice.call(arguments);
     return recurseSym(acctArr);
-
-
 }
-
-console.log(sym([1, 2, 3], [5, 2, 1, 4]))
-
-
 
 console.log(sym([1, 1, 2, 3, 3], [5, 2, 1, 4])) //should return [3, 4, 5].
 console.log(sym([1, 2, 3], [5, 2, 1, 4])) //should contain only three elements.

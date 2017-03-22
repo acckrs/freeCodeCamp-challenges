@@ -1,13 +1,11 @@
-function fac(n) {
-    if (n == 1) return 1;
-    else {
-        return n * fac(n - 1);
-        n--;
+function testinput(re, str) {
+    var midstring;
+    if (re.test(str)) {
+        midstring = ' contains ';
+    } else {
+        midstring = ' does not contain ';
     }
+    console.log(str + midstring + re.source);
 }
-var test = [
-    [3, 4, 5]
-];
-var bb = test.push([3, 4]);
-console.log(bb);
-//console.log(fac('5'));
+
+testinput(/bany/, "many");

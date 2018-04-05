@@ -18,4 +18,4 @@ function sumAll(arr) {
     }));
 }
 
-console.log(sumAll([6, 4]));
+console.log(sumAll([12569, 4]));
